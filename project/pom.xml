@@ -79,8 +79,8 @@
 				<artifactId>flyway-maven-plugin</artifactId>
 				<version>5.2.2</version>
 				<configuration>               <url>jdbc:mysql://localhost:3306/geek_db?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</url>
-					<user>admin</user>
-					<password>admin</password>
+					<user>root</user>
+					<password>arturios</password>
 					<schemas>
 						<schema>eda</schema>
 					</schemas>
