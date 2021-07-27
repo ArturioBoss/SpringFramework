@@ -8,10 +8,6 @@ CREATE TABLE roles (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-INSERT INTO roles (name)
-VALUES
-('ROLE_EMPLOYEE'),('ROLE_MANAGER'),('ROLE_ADMIN');
-
 DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
@@ -23,10 +19,6 @@ CREATE TABLE users (
   email varchar(50) NOT NULL,
   PRIMARY KEY (id)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
-
-INSERT INTO users (username,password,first_name,last_name,email)
-VALUES
-('artur','$2y$12$HkSUIITA5vaD1b8s4gZLL.HXGd6uofr0Y6WjsboX.YMOq3sZpL9Se','Артур','GeekBrains','maltcev-artur@yandex.ru');
 
 DROP TABLE IF EXISTS users_roles;
 
@@ -47,11 +39,7 @@ CREATE TABLE users_roles (
   ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO users_roles (user_id, role_id)
-VALUES
-(1, 1),
-(1, 2),
-(1, 3);
+DROP TABLE IF EXISTS categories;
 
 CREATE TABLE categories (
     id INT(11) NOT NULL AUTO_INCREMENT,
@@ -66,7 +54,7 @@ CREATE TABLE products (
     id	                  INT(11) NOT NULL AUTO_INCREMENT,
     category_id           INT(11) NOT NULL,
     vendor_code           VARCHAR(8) NOT NULL,
-    name                  VARCHAR(100) NOT NULL,
+    name                  VARCHAR(255) NOT NULL,
     title                 VARCHAR(255) NOT NULL,
     full_description      VARCHAR(5000) NOT NULL,
     price                 DECIMAL(8,2) NOT NULL,
@@ -95,9 +83,25 @@ CREATE TABLE products_images_full (
    product_id            INT(11) NOT NULL,
    path                  VARCHAR(250) NOT NULL,
    PRIMARY KEY (id),
-   CONSTRAINT FK_PRODUCT_ID_IMG FOREIGN KEY (product_id)
+   CONSTRAINT FK_PRODUCT_ID_IMG_FULL FOREIGN KEY (product_id)
    REFERENCES products (id)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
+INSERT INTO roles (name)
+VALUES
+('ROLE_EMPLOYEE'),('ROLE_MANAGER'),('ROLE_ADMIN');
+
+INSERT INTO users (username,password,first_name,last_name,email)
+VALUES
+('artur','$2y$12$HkSUIITA5vaD1b8s4gZLL.HXGd6uofr0Y6WjsboX.YMOq3sZpL9Se','Артур','GeekBrains','maltcev-artur@yandex.ru');
+
+INSERT INTO users_roles (user_id, role_id)
+VALUES
+(1, 1),
+(1, 2),
+(1, 3);
 
 INSERT INTO categories (title)
 VALUES
@@ -121,34 +125,30 @@ VALUES
 
 INSERT INTO products_images (product_id, path)
 VALUES
-(1, "Mijia_Home.png");
-(2, "plugin_3.png");
-(3, "Yeelight.png");
-(4, "mi_wifi.png");
-(5, "ZMI.png");
-(6, "ZMI2.png");
-(7, "YiHome.png");
-(8, "canera.png");
-(9, "MijiaCarCamera.png");
-(10, "HALO.png");
-(11, "70MAI Dash Сam.png");
+(1, "Mijia_Home.png"),
+(2, "PluginImg.png"),
+(3, "Yeelight.png"),
+(4, "mi_wifi.png"),
+(5, "ZMI.png"),
+(6, "ZMI2.png"),
+(7, "YiHome.png"),
+(8, "canera.png"),
+(9, "MijiaCarCamera.png"),
+(10, "HALO.png"),
+(11, "70MAI Dash Сam.png"),
 (12, "Mijia_Car_Camera.png");
-
 
 INSERT INTO products_images_full (product_id, path)
 VALUES
-(1, "SmartHome.png");
-(2, "plugin_background2.jpg");
-(3, "Yeelight.png");
-(4, "Mi Router.png");
-(5, "ZMI Portable Router.png");
-(6, "ZMI Smart PowerBank.png");
-(7, "Yi Home.png");
-(8, "Yi Action Camera.png");
-(9, "Yi Car DVR.png");
-(10, "Yi Halo.png");
-(11, "70_Mai_Car_DVR.jpg");
+(1, "SmartHome.png"),
+(2, "plugin_background2.jpg"),
+(3, "Yeelight.png"),
+(4, "Mi Router.png"),
+(5, "ZMI Portable Router.png"),
+(6, "ZMI Smart PowerBank.png"),
+(7, "Yi Home.png"),
+(8, "Yi Action Camera.png"),
+(9, "Yi Car DVR.png"),
+(10, "Yi Halo.png"),
+(11, "70_Mai_Car_DVR.jpg"),
 (12, "Mijia_Car_Camera.jpg");
-
-
-SET FOREIGN_KEY_CHECKS = 1;

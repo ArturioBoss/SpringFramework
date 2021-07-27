@@ -17,6 +17,6 @@ public class ShoppingCartService {
     public void addToCart(HttpSession session, Long productId) {
         Product product = productService.getProductById(productId);
         System.out.println(product);
-//        addToCart(session, product);
+        //addToCart(session, product);
     }
 }
