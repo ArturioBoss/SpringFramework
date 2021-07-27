@@ -71,13 +71,140 @@
             	    <li class="current"><a href="#home-slider">Главная</a></li>
                     <li><a href="#projects">Приложения</a></li>
                     <li><a href="#about">О нас</a></li>
-                    <li><img th:src="@{/img/shopping.png}" width="50" height="50"></li>
-<!--                <li><a href="#video">Видео</a></li>-->
-<!--				<li><a href="/login.php" class="external">ВХОД</a></li>-->
+                    <li><a href="#"><img th:src="@{/img/shopping.png}" width="50" height="50"></a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <div class="row">
+        <div class="span3">
+            <nav id="options" class="work-nav">
+                <ul id="filters" class="option-set" data-option-key="filter">
+                    <li class="type-work"></li>
+
+                    <li><a href="#filter" data-option-value="*" class="selected">Все приложения</a></li>
+                    <li><a href="#filter" data-option-value=".auto">Автоматизация</a></li>
+                    <li><a href="#filter" data-option-value=".cam">Камеры</a></li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <div class="span9">
+            <div class="row">
+                <section id="projects">
+                    <ul id="thumbs">
+                        <div>
+                            <li class="item-thumbs span3 auto">
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" name="SmartHome" title="Умный дом (Mijia Home)" th:href="@{/img/work/full/SmartHome.png}" file="1" vername="Стабильную версию: "  ver="1" vername2="Версия: " file2="">
+<!--                                    <a th:href="@{'/shop/cart/add/'}" class="btn btn-primary" onclick="sendName()">В корзину</a>-->
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb_9 font-icon-SmartHome"></span>
+                                </a>
+                                <img  th:src="@{/img/work/thumbs/Mijia_Home.png}" alt="Управление устройствами Xiaomi.<a>Отличия от оригинала:</a> Частично реализован перевод сценариев и статусов устройств, в процессе перевод уведомлений. Для замены плагинов ROOT не требуется! Путь для замены плагинов: <au>Внутренняя память/EDA/plugin/install/mpk/№ папки</au>" >
+                            </li>
+
+                        </div>
+
+
+                        <li class="item-thumbs span3 auto">
+                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" name="SmartHomePlugin" title="Плагины для Умного дома" th:href="@{/img/work/full/plugin_background2.jpg}" file="" vername="плагины" ver="" file2="" vername2="плагины" ver2="">
+                                <span class="overlay-img"></span>
+                                <span class="overlay-img-thumb_7 font-icon-SmartHomePlugin"></span>
+                            </a>
+                            <img  th:src="@{/img/work/thumbs/plugin_3.png}" alt="Плагины для различных устройств в Умном доме. Путь для замены плагинов: <au>Внутренняя память/EDA/plugin/install/mpk/№ папки.</au> </br><au><a>КУПИТЬ</a> 50 руб.</au>" >
+                        </li>
+
+                        <li class="item-thumbs span3 auto">
+                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Yeelight" th:href="@{/img/work/full/Yeelight.png}" file=""  vername="Версия: " ver="" vername2="Версия: " file2="" ver2="">
+                                <span class="overlay-img"></span>
+                                <span class="overlay-img-thumb_8 font-icon-Yeelight"></span>
+                            </a>
+                            <img th:src="@{/img/work/thumbs/Yeelight.png}" alt="Приложение для управления умными лампами Xiaomi (Yeelight LED (цветная), Yeelight LED (белая), Ночник Yeelight и Настольная лампа Mijia) Полный перевод, включая Помощь и Справку.</br><au><a>КУПИТЬ</a> 50 руб.</au>">
+                        </li>
+
+                        <li class="item-thumbs span3 auto">
+                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Mi Роутер" th:href="@{/img/work/full/Mi Router.png}" file="" vername="Девлоперскую версию: " ver="">
+                                <span class="overlay-img"></span>
+                                <span class="overlay-img-thumb_9ru font-icon-Mi_Роутер"></span>
+                            </a>
+                            <img th:src="@{/img/work/thumbs/mi_wifi.png}" alt="Приложение для управления роутерами Xiaomi. </br><au><a>КУПИТЬ</a> 50 руб.</au>">
+                        </li>
+
+                        <li class="item-thumbs span3 auto">
+                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="ZMI Portable Router" th:href="@{/img/work/full/ZMI Portable Router.png}" file="" vername="Версия: " ver="" vername2="Версия: " file2="" ver2="">
+                                <span class="overlay-img"></span>
+                                <span class="overlay-img-thumb_15 font-icon-Portable_Router"></span>
+                            </a>
+                            <img th:src="@{/img/work/thumbs/ZMI.png}" alt="Используйте сим-карту для интернета любого мобильного оператора в своём мобильном роутере ZMI и разделяйте задачи: сим-карта в телефоне – для звонков, сим-карта в роутере – для интернета. К тому же, можно использовать и как портативное зарядное устройство. </br><au><a>КУПИТЬ</a> 50 руб.</au>">
+                        </li>
+
+                        <li class="item-thumbs span3 auto">
+                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="ZMI Smart PowerBank" th:href="@{/img/work/full/ZMI Smart PowerBank.png}" file="" vername="Версия: " ver="" file2="" vername2="Версия: " ver2="">
+                                <span class="overlay-img"></span>
+                                <span class="overlay-img-thumb_15 font-icon-Smart_PowerBank"></span>
+                            </a>
+                            <img th:src="@{/img/work/thumbs/ZMI2.png}" alt="Приложение для полного контроля и управления Вашего батарейного блока ZMI. </br><au><a>КУПИТЬ</a> 50 руб.</au>">
+                        </li>
+
+
+                        <li class="item-thumbs span3 cam">
+                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Yi Home (IP-Камеры)" th:href="@{/img/work/full/Yi Home.png}" file="" vername="Китайскую версию: " ver="">
+                                <span class="overlay-img"></span>
+                                <span class="overlay-img-thumb_7 font-icon-Yi_Home"></span>
+                            </a>
+                            <img th:src="@{/img/work/thumbs/YiHome.png}" alt="Приложение для управления умными IP-камерами Xiaomi Mi ants. </br><au><a>КУПИТЬ</a> 50 руб.</au>">
+                        </li>
+
+                        <li class="item-thumbs span3 cam">
+                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Yi Action Camera (Спортивная камера)" th:href="@{/img/work/full/Yi Action Camera.png}" file="" vername="Версия: " ver="" file2="" vername2="Версия: " ver2="">
+                                <span class="overlay-img"></span>
+                                <span class="overlay-img-thumb_16 font-icon-Yi_Action_Camera"></span>
+                            </a>
+                            <img th:src="@{/img/work/thumbs/canera.png}" alt="Данное приложение поможет Вам управлять, снимать, просматривать отснятое видео и фото.
+Существует несколько моделей данной камеры, Отличие на данный момент только в улучшении звука и фокусировки линзы. </br><au><a>КУПИТЬ</a> 50 руб.</au>">
+                        </li>
+
+                        <li class="item-thumbs span3 cam">
+                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Yi Car DVR (Видеорегистратор)" th:href="@{/img/work/full/Yi Car DVR.png}" file="" vername="Версия: " ver="" file2="" vername2="Версия: " ver2="">
+                                <span class="overlay-img"></span>
+                                <span class="overlay-img-thumb_10 font-icon-Yi_Car_DVR"></span>
+                            </a>
+                            <img th:src="@{/img/work/thumbs/MijiaCarCamera.png}" alt="Команда Yi Technology, объединившись с профессионалами из Германии, Тайваня, Китая и Японии, создала умный видеорегистратор, ранее не имевший аналогов по оптимальному соотношению стоимости и производительности. </br><au><a>КУПИТЬ</a> 50 руб.</au>">
+                        </li>
+
+                        <li class="item-thumbs span3 cam">
+                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Yi Halo (VR-Камера)" th:href="@{/img/work/full/Yi Halo.png}" file="" vername="Версия: " ver="" file2="" vername2="Версия: " ver2="">
+                                <span class="overlay-img"></span>
+                                <span class="overlay-img-thumb_7 font-icon-Yi_Halo"></span>
+                            </a>
+                            <img th:src="@{/img/work/thumbs/HALO.png}" alt="Бывший партнер Xiaomi, компания Yi Technology сегодня представила Yi Halo – платформу для записи VR-видео. Конструкция состоит из 17 камер Yi 4K Action Camera, а также обладает собственным дисплеем и аккумулятором на 50 Вт для автономной работы. </br><au><a>КУПИТЬ</a> 50 руб.</au>">
+                        </li>
+
+                        <li class="item-thumbs span3 cam">
+                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Видеорегистратор 70MAI Dash Сam" th:href="@{/img/work/full/70_Mai_Car_DVR.jpg}" file="" vername="Версия: " ver="" file2="" vername2="Версия: " ver2="">
+                                <span class="overlay-img"></span>
+                                <span class="overlay-img-thumb_12 font-icon-Mai_Car_DVR"></span>
+                            </a>
+                            <img th:src="@{/img/work/thumbs/70MAI Dash Сam.png}" alt="Приложение для управления видеорегистратором 70MAI Dash Сam. </br><au><a>КУПИТЬ</a> 50 руб.</au>">
+                        </li>
+
+                        <li class="item-thumbs span3 cam">
+                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Видеорегистратор Mijia Car Camera" th:href="@{/img/work/full/Mijia_Car_Camera.jpg}" file="" vername="Версия: " ver="" file2="" vername2="Версия: " ver2="">
+                                <span class="overlay-img"></span>
+                                <span class="overlay-img-thumb_16 font-icon-Mijia_Car_Camera"></span>
+                            </a>
+                            <img th:src="@{/img/work/thumbs/Mijia_Car_Camera.png}" alt="Приложение для управления видеорегистратором Mijia Car Camera. </br><au><a>КУПИТЬ</a> 50 руб.</au>">
+                        </li>
+
+
+                    </ul>
+                </section>
+
+            </div>
+        </div>
+    </div>
 
     <div id="about" class="page-alternate">
         <div class="container">
@@ -112,7 +239,7 @@
                             <span class="overlay-img"></span>
                             <span class="overlay-text-thumb">Программист</span>
                         </div>
-                        <img src="stiles/img/profile/profile-02.jpg" alt="Jane Helf">
+                        <img src="stiles/img/profile/profile-02.jpg" alt="Dizz74">
                     </div>
                     <h3 class="profile-name">Dizz74</h3>
                     <p class="profile-description">Оптимизация, разработка приложений</p>
